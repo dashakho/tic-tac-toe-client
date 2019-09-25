@@ -1,1 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
+
+// #my-cool-div {
+//   background-image: url('public/cat.jpg')
+// }
+
+@font-face {
+  font-family: 'Nature Beauty';
+  src: url('public/Nature-Beauty.ttf') format('truetype');
+}
+
+.element-with-custom-font {
+  font-family: 'Nature Beauty';
+}
+
+// OR
+// font-family: 'Nanum Gothic', sans-serif;
+// <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
