@@ -1,17 +1,34 @@
-@import '~bootstrap/scss/bootstrap';
-
-// #my-cool-div {
+@import '~bootstrap/scss/bootstrap'; // #my-cool-div {
 //   background-image: url('public/cat.jpg')
 // }
 
 @font-face {
   font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
+  src: url("public/Nature-Beauty.ttf") format('truetype');
 }
 
 .element-with-custom-font {
   font-family: 'Nature Beauty';
 }
+$black: #000;
+
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+
+.board td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 5px solid #DFDCE3;
+  cursor: pointer;
+}
+
 
 // OR
 // font-family: 'Nanum Gothic', sans-serif;
