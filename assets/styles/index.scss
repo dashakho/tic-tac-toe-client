@@ -1,15 +1,17 @@
 @import '~bootstrap/scss/bootstrap'; // #my-cool-div {
 //   background-image: url('public/cat.jpg')
 // }
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url("public/Nature-Beauty.ttf") format('truetype');
-}
 
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-$black: #000;
+
+// @font-face {
+//   font-family: 'Nature Beauty';
+//   src: url("public/Nature-Beauty.ttf") format('truetype');
+// }
+//
+// .element-with-custom-font {
+//   font-family: 'Nature Beauty';
+// }
+// $black: #000;
 
 .success {
   color: green;
@@ -19,20 +21,16 @@ $black: #000;
   color: red;
 }
 
-
 .gameboard {
   width: 45vh;
   height: 100px;
   text-align: center;
   border: 5px;
 }
-
 .container {
   justify-content: center;
   margin: 0 auto;
 }
-
-
 .row {
   align-content: center;
   border: 1px solid darkgray;
@@ -49,6 +47,9 @@ $black: #000;
   justify-content: center;
 
 }
+
+
+
 
 // OR
 // font-family: 'Nanum Gothic', sans-serif;
