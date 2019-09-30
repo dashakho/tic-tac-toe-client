@@ -11,6 +11,7 @@ const onNewGameSuccess = function(data) {
   message.successMessage('Successfully updated game')
   store.game = data.game
   console.log('store is', store)
+$('.container').show()
 }
 const onNewGameFailure = function(data) {
   message.failureMessage('You have not created a new game')

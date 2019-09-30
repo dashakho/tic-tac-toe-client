@@ -27,6 +27,7 @@
   margin: auto;
   text-align: center;
   border: 5px;
+  // display: none;
 }
 
 // .container {
@@ -54,11 +55,14 @@
 }
 
 
-
 .auth-hide {
   display: none;
 }
 
+
+// .container, .gameboard {
+//   display: none;
+// }
 
 // .box:nth-child(3n) {
 //   border-right: 0;

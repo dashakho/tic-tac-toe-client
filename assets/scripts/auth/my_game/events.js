@@ -40,7 +40,6 @@ $('#new-message').text('It is O turn')
 $('#new-message').text('It is X turn')
   }
 
-
   if (typeof store.players[store.currentPlayer][cellRow][cellId] === 'number' ||
       typeof store.players[nextPlayer][cellRow][cellId] === 'number') {  // Is busy (null)
 
