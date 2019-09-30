@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap'; // #my-cool-div {
 //   background-image: url('public/cat.jpg')
 // }
-
+// @import'~animate.css/animate.min.css'
 
 // @font-face {
 //   font-family: 'Nature Beauty';
@@ -24,31 +24,49 @@
 .gameboard {
   width: 45vh;
   height: 100px;
+  margin: auto;
   text-align: center;
   border: 5px;
 }
-.container {
-  justify-content: center;
-  margin: 0 auto;
-}
-.row {
-  align-content: center;
-  border: 1px solid darkgray;
-  justify-content: center;
-}
+
+// .container {
+//   justify-content: center;
+//   margin: 0 auto;
+// }
+// .row {
+//   align-content: center;
+//   // border: 1px solid darkgray;
+//   justify-content: center;
+// }
 
 .box {
   align-items: center;
   border: 1px solid darkgray;
+  // border-right: 1px solid;
+  // border-top: 1px solid;
+
+  cursor: pointer;
   color: darkgray;
   display: flex;
-  font-size: 2rem;
+  font-size: 3rem;
   height: 15vh;
   justify-content: center;
-
 }
 
 
+
+.auth-hide {
+  display: none;
+}
+
+
+// .box:nth-child(3n) {
+//   border-right: 0;
+// }
+//
+// .box:nth-child(-n +3) {
+//   border-top: 0;
+// }
 
 
 // OR

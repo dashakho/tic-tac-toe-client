@@ -54,16 +54,17 @@ function checkWinnerStats() {
 
     winCombinations.forEach(item => {
       if(JSON.stringify(item) === JSON.stringify(combinations)) {
-        alert(store.currentPlayer + " are win!")
+        $('#new-message').text(store.currentPlayer + ' are win!')
+        // alert(store.currentPlayer + " are win!")
         store.gameOver = true;
       }
     });
 
     if(combinations.length === 5) {
-        alert("Тiе!");
+$('#new-message').text('Tie!')
+        // alert("Тiе!");
         store.gameOver = true;
     }
-
   }
 
 initialGameValues();

@@ -7,6 +7,7 @@ const successMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+
 }
 const failureMessage = function (newText) {
   $('#message').text(newText)
@@ -15,6 +16,7 @@ const failureMessage = function (newText) {
 }
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
+
 }
 const onSignUpFailure = function () {
   failureMessage('Sign up failed.')
@@ -29,19 +31,30 @@ const onSignInSuccess = function (responseData) {
   // can use it later from any file
   store.user = responseData.user
   console.log('store is', store)
+  // $('#sign-in-hide').hide()
+  $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
+  // $('.auth-show').toggleClass('auth-hide auth-show')
+
 }
 const onSignInFailure = function () {
   failureMessage('Sign in failed.')
 }
+
 const onChangePasswordSuccess = function () {
+  // document.getElementById("change-hide").style.display = "none";
+   $('#change-password-hide').hide()
+
   successMessage('Changed password successfully!')
+
 }
+
 const onChangePasswordFailure = function () {
   failureMessage('Change password failed.')
 }
 
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
+    $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
 }
 const onSignOutFailure = function () {
   failureMessage('Sign out failed.')

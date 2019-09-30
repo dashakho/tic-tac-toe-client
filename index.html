@@ -43,37 +43,54 @@
 <br />
 <br />
 <br />
-      <h2>Sign-up</h2>
+    <div class="auth-show">  <h2>Sign-up</h2>
       <form id="sign-up">
       <input type="email" name="credentials[email]" placeholder='Enter email...'>
       <input type="password" name="credentials[password]" placeholder='Enter password'>
       <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
       <button>Sign up</button>
       </form>
+</div>
 
-      <h2>Sign-in</h2>
+      <div class="auth-show"> <h2>Sign-in</h2>
            <form id='sign-in'>
             <input type="email" name="credentials[email]" placeholder='Enter email...'>
             <input type="password" name="credentials[password]" placeholder='Enter password'>
             <button>Sign in</button>
            </form>
+      </div>
 
-      <h2>Change Password</h2>
+      <div class="auth-hide"> <h2>Change Password</h2>
                 <form id='change-password'>
                 <input type="password" name="passwords[old]" placeholder='Enter old password'>
                 <input type="password" name="passwords[new]" placeholder='Enter new password'>
                 <button>Change Password</button>
                 </form>
+      </div>
 
-      <h2>Sign-out</h2>
+      <div class="auth-hide"><h2>Sign-out</h2>
                 <form id='sign-out'>
                 <button>Sign out</button>
                 </form>
+</div>
 
 
-      <h2>New Game</h2>
-      <button id="new-game">New Game</button>
+      <div class="auth-hide make-block">
+      <button type="button" id="new-game">New Game</button>
+      <button type="button" id="get-games">Get Game Stats</button>
+      </div>
 
+
+      <h2 id="new-message"> </h2>
+
+      <!-- <h2>Number of Games Played</h2>
+      <button id="number-of-games-played">New Game</button> -->
+
+
+      <!-- <form id="get-games">
+       <input type="submit" value="Get Number of Games" />
+     </form>
+      <p id="finished-games"></p> -->
 
         <!--<input name="book[title]" type="text">
         <input name="book[author]" type="text">
