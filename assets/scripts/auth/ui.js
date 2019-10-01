@@ -7,18 +7,19 @@ const successMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
-
 }
+
 const failureMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
+
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
   $('.passwordempty').val('')
-
 }
+
 const onSignUpFailure = function () {
   failureMessage('Sign up failed.')
   $('.passwordempty').val('')
@@ -36,8 +37,8 @@ const onSignInSuccess = function (responseData) {
   // $('#sign-in-hide').hide()
   $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
   // $('.auth-show').toggleClass('auth-hide auth-show')
-// $('#container, #gameboard').hide()
-// $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
+
+
 $('.passwordempty').val('')
 }
 const onSignInFailure = function () {
@@ -46,12 +47,10 @@ const onSignInFailure = function () {
 }
 
 const onChangePasswordSuccess = function () {
-  // document.getElementById("change-hide").style.display = "none";
    $('#change-password-hide').hide()
 
   successMessage('Changed password successfully!')
   $('.passwordempty').val('')
-
 }
 
 const onChangePasswordFailure = function () {

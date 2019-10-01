@@ -14,7 +14,6 @@ const onNewGame = function (event) {
     .catch(ui.onNewGameFailure)
 }
 
-
 const onClick = function (event) {
   // event = Event is the click happening in app.js
   // target = takes the specific html element (div for this example) that's been clicked
@@ -25,12 +24,6 @@ const onClick = function (event) {
   let nextPlayer = '';
 
   // console.log(store, store.currentPlayer)
-
-  // if(store.currentPlayer === 'x') {
-  //   nextPlayer = 'o';
-  // } else {
-  //   nextPlayer = 'x';
-  // }
 
   if(store.currentPlayer === 'x') {
     nextPlayer = 'o';
@@ -44,7 +37,6 @@ $('#new-message').text('It is X turn')
       typeof store.players[nextPlayer][cellRow][cellId] === 'number') {  // Is busy (null)
 
       // console.log('This cell is busy');
-      // alert('This cell is busy');
 $('#new-message').text('This cell is busy!')
 
   } else { // avaliable (number)

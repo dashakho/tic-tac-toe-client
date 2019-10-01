@@ -20,7 +20,7 @@ $(() => {
   $('#new-game').on('click', gameEvents.onNewGame)
   $('.box').on('click', gameEvents.onClick)
   $('#get-games').on('click', gameEvents.onGetGames)
-$('.container').hide()
+  $('.container').hide()
 
 
   // $('#get-id').on('click', gameEvents.onGetId)

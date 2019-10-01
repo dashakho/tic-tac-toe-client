@@ -61,8 +61,7 @@ function checkWinnerStats() {
     });
 
     if(combinations.length === 5) {
-$('#new-message').text('Tie!')
-        // alert("Тiе!");
+    $('#new-message').text('Tie!')
         store.gameOver = true;
     }
   }

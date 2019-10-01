@@ -1,24 +1,22 @@
-@import '~bootstrap/scss/bootstrap'; // #my-cool-div {
-//   background-image: url('public/cat.jpg')
-// }
-// @import'~animate.css/animate.min.css'
+@import '~bootstrap/scss/bootstrap';
+// @import '~animate.css/animate.min.css'
 
-// @font-face {
-//   font-family: 'Nature Beauty';
-//   src: url("public/Nature-Beauty.ttf") format('truetype');
-// }
-//
-// .element-with-custom-font {
-//   font-family: 'Nature Beauty';
-// }
-// $black: #000;
+@font-face {
+  font-family: 'Nature Beauty';
+  src: url("public/Nature-Beauty.ttf") format('truetype');
+}
 
 .success {
   color: green;
+  font-size: 22px;
 }
 
 .failure {
   color: red;
+}
+
+h1 {
+  text-align: center;
 }
 
 .gameboard {
@@ -27,52 +25,26 @@
   margin: auto;
   text-align: center;
   border: 5px;
-  // display: none;
 }
 
-// .container {
-//   justify-content: center;
-//   margin: 0 auto;
-// }
-// .row {
-//   align-content: center;
-//   // border: 1px solid darkgray;
-//   justify-content: center;
-// }
+body {
+  background-image: url("https://images.fineartamerica.com/images-medium-large-5/white-brick-wall-background-texture-wooden-floor-dmitryevs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .box {
   align-items: center;
-  border: 1px solid darkgray;
-  // border-right: 1px solid;
-  // border-top: 1px solid;
-
-  cursor: pointer;
-  color: darkgray;
+  border: 1.5px solid black;
+  color: clack;
   display: flex;
-  font-size: 3rem;
+  font-size: 2rem;
   height: 15vh;
   justify-content: center;
+  cursor: pointer;
 }
-
 
 .auth-hide {
   display: none;
 }
-
-
-// .container, .gameboard {
-//   display: none;
-// }
-
-// .box:nth-child(3n) {
-//   border-right: 0;
-// }
-//
-// .box:nth-child(-n +3) {
-//   border-top: 0;
-// }
-
-
-// OR
-// font-family: 'Nanum Gothic', sans-serif;
-// <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">

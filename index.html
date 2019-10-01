@@ -13,6 +13,8 @@
     </head>
     <body>
 
+      <br />
+
 
 <h1>Tic Tac Toe Game </h1>
 
@@ -43,6 +45,7 @@
 <br />
 <br />
 <br />
+
     <div class="auth-show">  <h2>Sign-up</h2>
       <form id="sign-up">
       <input type="email" name="credentials[email]" placeholder='Enter email...'>
@@ -50,7 +53,7 @@
       <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
       <button>Sign up</button>
       </form>
-</div>
+    </div>
 
       <div class="auth-show"> <h2>Sign-in</h2>
            <form id='sign-in'>
@@ -60,7 +63,22 @@
            </form>
       </div>
 
-      <div class="auth-hide"> <h2>Change Password</h2>
+      <br />
+      <br />
+
+
+  <h2 id="new-message"> </h2>
+
+      <br />
+
+      <div class="auth-hide make-block">
+      <button type="button" id="new-game">New Game</button>
+      <button type="button" id="get-games">Get Game Stats</button>
+      </div>
+
+<br />
+
+      <div class="auth-hide"> <h2>change password</h2>
                 <form id='change-password'>
                 <input type="password" name="passwords[old]" placeholder='Enter old password' class='passwordempty'>
                 <input type="password" name="passwords[new]" placeholder='Enter new password' class='passwordempty'>
@@ -68,37 +86,11 @@
                 </form>
       </div>
 
-      <div class="auth-hide"><h2>Sign-out</h2>
+      <div class="auth-hide"><h2>sign-out</h2>
                 <form id='sign-out'>
                 <button>Sign out</button>
                 </form>
-</div>
-
-
-      <div class="auth-hide make-block">
-      <button type="button" id="new-game">New Game</button>
-      <button type="button" id="get-games">Get Game Stats</button>
-      </div>
-
-
-      <h2 id="new-message"> </h2>
-
-      <!-- <h2>Number of Games Played</h2>
-      <button id="number-of-games-played">New Game</button> -->
-
-
-      <!-- <form id="get-games">
-       <input type="submit" value="Get Number of Games" />
-     </form>
-      <p id="finished-games"></p> -->
-
-        <!--<input name="book[title]" type="text">
-        <input name="book[author]" type="text">
-        <button type="submit">Create Book</button> -->
-
-
-<!-- <img src="public/cat.jpg"> -->
-
+     </div>
 
     </body>
 </html>
