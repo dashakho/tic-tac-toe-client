@@ -51,12 +51,12 @@ function checkWinnerStats() {
         }
       });
     });
-
     winCombinations.forEach(item => {
       if(JSON.stringify(item) === JSON.stringify(combinations)) {
         $('#new-message').text(store.currentPlayer + ' are win!')
-        // alert(store.currentPlayer + " are win!")
+
         store.gameOver = true;
+        return;
       }
     });
 
