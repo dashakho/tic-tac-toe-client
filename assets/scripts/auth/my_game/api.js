@@ -23,7 +23,7 @@ const getGames = function () {
     method: 'GET',
     success: function (data) {
       totalGames = data.games.length
-      console.log(totalGames)
+      // console.log(totalGames)
     },
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -31,7 +31,47 @@ const getGames = function () {
   })
 }
 
+const updateGame = function (INDEX, VALUE, OVER) {
+  const dataObj = {
+    game: {
+      cell: {
+        index: INDEX,
+        value: VALUE
+      },
+      over: false
+    }
+  }
+  const dataObjOver = {
+    game: {
+      over: true
+    }
+  }
+
+  if (!OVER) { // game is not ended
+    return $.ajax({
+      url: config.apiUrl + '/games/' + store.game.id,
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data: dataObj
+    })
+  } else if (OVER === true && INDEX === '' & VALUE === '') { // game is over
+    // console.log('entered')
+    return $.ajax({
+      url: config.apiUrl + `/games/${store.game.id}`,
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data: dataObjOver
+    })
+  }
+};
+
+
 module.exports = {
   newGame,
-  getGames
+  getGames,
+  updateGame
 }

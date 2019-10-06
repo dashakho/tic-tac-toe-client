@@ -3,26 +3,27 @@
 
 const store = require('../store')
 
-const successMessage = function (newText) {
+const successMessage = function(newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
 
-const failureMessage = function (newText) {
+const failureMessage = function(newText) {
   $('#message').text(newText)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
 
-const onSignUpSuccess = function () {
+const onSignUpSuccess = function() {
   successMessage('Signed up successfully!')
   $('.passwordempty').val('')
 }
 
-const onSignUpFailure = function () {
+const onSignUpFailure = function() {
   failureMessage('Sign up failed.')
   $('.passwordempty').val('')
+  $('.emailempty').val('')
 }
 
 // responseData is the data the API sends back, when we make a request.
@@ -37,33 +38,38 @@ const onSignInSuccess = function (responseData) {
   // $('#sign-in-hide').hide()
   $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
   // $('.auth-show').toggleClass('auth-hide auth-show')
+  $('.passwordempty').val('')
+  $('.emailempty').val('')
+  // $('.emailempty').trigger('reset')
 
 
-$('.passwordempty').val('')
 }
-const onSignInFailure = function () {
+const onSignInFailure = function() {
   failureMessage('Sign in failed.')
   $('.passwordempty').val('')
+  $('.emailempty').val('')
+  // $('#sign-in').trigger('reset')
 }
 
-const onChangePasswordSuccess = function () {
-   $('#change-password-hide').hide()
+const onChangePasswordSuccess = function() {
+  $('#change-password-hide').hide()
 
   successMessage('Changed password successfully!')
   $('.passwordempty').val('')
 }
 
-const onChangePasswordFailure = function () {
+const onChangePasswordFailure = function() {
   failureMessage('Change password failed.')
   $('.passwordempty').val('')
 }
 
-const onSignOutSuccess = function () {
+const onSignOutSuccess = function() {
   successMessage('Signed out successfully!')
-    $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
-    $('.container').hide()
+  $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
+  $('.container').hide()
+  $('.emailempty').val('')
 }
-const onSignOutFailure = function () {
+const onSignOutFailure = function() {
   failureMessage('Sign out failed.')
 }
 

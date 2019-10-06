@@ -51,17 +51,27 @@ function checkWinnerStats() {
         }
       });
     });
-    winCombinations.forEach(item => {
-      if(JSON.stringify(item) === JSON.stringify(combinations)) {
-        $('#new-message').text(store.currentPlayer + ' are win!')
 
-        store.gameOver = true;
-        return;
-      }
+    winCombinations.forEach(combination => {
+      let isWinComination = true;
+
+      combination.forEach((item, index, arr) => {
+
+        if(!combinations.includes(item)) { // if index is not found
+          isWinComination = false;
+        }
+
+        if((arr.length - 1) === index && isWinComination) { // last iteration
+          $('#new-message').text(store.currentPlayer + ' is win!')
+
+          store.gameOver = true;
+          return;
+        }
+      });
     });
 
     if(combinations.length === 5) {
-    $('#new-message').text('Tie!')
+      $('#new-message').text('Tie!')
         store.gameOver = true;
     }
   }
