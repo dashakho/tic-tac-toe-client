@@ -1,6 +1,4 @@
-@import '~bootstrap/scss/bootstrap';
-// @import '~animate.css/animate.min.css'
-
+@import '~bootstrap/scss/bootstrap'; // @import '~animate.css/animate.min.css'
 @font-face {
   font-family: 'Nature Beauty';
   src: url("public/Nature-Beauty.ttf") format('truetype');
@@ -47,4 +45,9 @@ body {
 
 .auth-hide {
   display: none;
+}
+
+
+.signUpButton {
+position: center;
 }

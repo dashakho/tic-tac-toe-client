@@ -17,11 +17,13 @@ const failureMessage = function(newText) {
 
 const onSignUpSuccess = function() {
   successMessage('Signed up successfully!')
+  setTimeout(function () { $('#message').text('') }, 1000)
   $('.passwordempty').val('')
 }
 
 const onSignUpFailure = function() {
   failureMessage('Sign up failed.')
+  setTimeout(function () { $('#message').text('') }, 1000)
   $('.passwordempty').val('')
   $('.emailempty').val('')
 }
@@ -30,6 +32,7 @@ const onSignUpFailure = function() {
 // in this case, it has
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
+  setTimeout(function () { $('#message').text('') }, 1000)
   // console.log('responseData is', responseData)
   // save the 'user' we got from the API inside of 'store' so we
   // can use it later from any file
@@ -46,6 +49,7 @@ const onSignInSuccess = function (responseData) {
 }
 const onSignInFailure = function() {
   failureMessage('Sign in failed.')
+  setTimeout(function () { $('#message').text('') }, 1000)
   $('.passwordempty').val('')
   $('.emailempty').val('')
   // $('#sign-in').trigger('reset')
@@ -55,22 +59,26 @@ const onChangePasswordSuccess = function() {
   $('#change-password-hide').hide()
 
   successMessage('Changed password successfully!')
+  setTimeout(function () { $('#message').text('') }, 1000)
   $('.passwordempty').val('')
 }
 
 const onChangePasswordFailure = function() {
   failureMessage('Change password failed.')
+  setTimeout(function () { $('#message').text('') }, 1000)
   $('.passwordempty').val('')
 }
 
 const onSignOutSuccess = function() {
   successMessage('Signed out successfully!')
+  setTimeout(function () { $('#message').text('') }, 1000)
   $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
   $('.container').hide()
   $('.emailempty').val('')
 }
 const onSignOutFailure = function() {
   failureMessage('Sign out failed.')
+  setTimeout(function () { $('#message').text('') }, 1000)
 }
 
 module.exports = {
