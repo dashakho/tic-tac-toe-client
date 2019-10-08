@@ -30,11 +30,11 @@ const onSignUpFailure = function() {
 // in this case, it has
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
-  console.log('responseData is', responseData)
+  // console.log('responseData is', responseData)
   // save the 'user' we got from the API inside of 'store' so we
   // can use it later from any file
   store.user = responseData.user
-  console.log('store is', store)
+  // console.log('store is', store)
   // $('#sign-in-hide').hide()
   $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
   // $('.auth-show').toggleClass('auth-hide auth-show')
