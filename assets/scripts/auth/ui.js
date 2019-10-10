@@ -19,6 +19,7 @@ const onSignUpSuccess = function() {
   successMessage('Signed up successfully!')
   setTimeout(function () { $('#message').text('') }, 1000)
   $('.passwordempty').val('')
+  $('.emailempty').val('')
 }
 
 const onSignUpFailure = function() {

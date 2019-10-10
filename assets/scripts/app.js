@@ -23,5 +23,6 @@ $(() => {
   $('.container').hide()
 
 
+
   // $('#get-id').on('click', gameEvents.onGetId)
 })

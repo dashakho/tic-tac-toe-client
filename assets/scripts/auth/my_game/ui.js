@@ -7,7 +7,7 @@ const message = require('../ui.js')
 
 
 const onNewGameSuccess = function(data) {
-  message.successMessage('Successfully updated game')
+  message.successMessage('Successfully created a new game')
   setTimeout(function () { $('#message').text('') }, 1000)
   store.game = data.game
   // console.log('store is', store)
@@ -33,9 +33,18 @@ const onGetResultsFail = data => {
   setTimeout(function () { $('#message').text('') }, 1000)
 }
 
+
+const onUpdateGameSuccess = function(data) {
+  message.successMessage('Successfully updated a game')
+  setTimeout(function () { $('#message').text('') }, 1000)
+  // store.game = data.game
+  console.log('update')
+}
+
 module.exports = {
   onNewGameSuccess,
   onNewGameFailure,
   onGetGamesResults,
-  onGetResultsFail
+  onGetResultsFail,
+  onUpdateGameSuccess
 }
