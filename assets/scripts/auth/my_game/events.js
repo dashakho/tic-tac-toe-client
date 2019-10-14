@@ -44,6 +44,7 @@ const onClick = function(event) {
   if (typeof store.players[store.currentPlayer][cellRow][cellId] === 'number' ||
     typeof store.players[nextPlayer][cellRow][cellId] === 'number') { // Is busy (null)
     $('#new-message').text('This cell is busy!')
+    setTimeout(function () { $('#new-message').text('') }, 1000)
     // console.log('This cell is busy');
 
   } else { // avaliable (number)

@@ -40,12 +40,7 @@ const updateGame = function (index, value, over) {
       over: over
     }
   }
-  // const dataObjOver = {
-  //   game: {
-  //     over: true
-  //   }
-  // }
-  // if (!OVER) { // game is not ended
+
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
@@ -54,17 +49,6 @@ const updateGame = function (index, value, over) {
     },
     data: dataObj
   })
-  // } else if (OVER === true && INDEX === '' & VALUE === '') { // game is over
-  //   // console.log('entered')
-  //   return $.ajax({
-  //     url: config.apiUrl + `/games/${store.game.id}`,
-  //     method: 'PATCH',
-  //     headers: {
-  //       Authorization: 'Token token=' + store.user.token
-  //     },
-  //     data: dataObjOver
-  //   })
-  // }
 }
 
 module.exports = {
