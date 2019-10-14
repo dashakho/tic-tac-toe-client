@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <br />
+
+
+<h1>Tic Tac Toe Game </h1>
+
+<h2 id="message"> </h2>
+
+<div class="container gameboard" id="gameboard">
+  <div class="row">
+    <div data-id="0" data-cell-index="0" data-row="0" class="col-4 box"></div>
+    <div data-id="1" data-cell-index="1" data-row="0" class="col-4 box"></div>
+    <div data-id="2" data-cell-index="2" data-row="0" class="col-4 box"></div>
+
+    <div data-id="0" data-cell-index="3" data-row="1" class="col-4 box"></div>
+    <div data-id="1" data-cell-index="4" data-row="1" class="col-4 box"></div>
+    <div data-id="2" data-cell-index="5" data-row="1" class="col-4 box"></div>
+
+    <div data-id="0" data-cell-index="6" data-row="2" class="col-4 box"></div>
+    <div data-id="1" data-cell-index="7" data-row="2" class="col-4 box"></div>
+    <div data-id="2" data-cell-index="8" data-row="2" class="col-4 box"></div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    <div class="auth-show">  <h2>Sign-up</h2>
+      <form id="sign-up">
+      <input type="email" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+      <input type="password" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+      <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
+      <button class="signUpButton">Sign up</button>
+      </form>
+    </div>
+
+      <div class="auth-show"> <h2>Sign-in</h2>
+           <form id='sign-in'>
+            <input type="email" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+            <input type="password" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+            <button>Sign in</button>
+           </form>
+      </div>
+
+      <br />
+      <br />
+
+
+  <h2 id="new-message"> </h2>
+
+      <br />
+
+      <div class="auth-hide make-block">
+      <button type="button" id="new-game">New Game</button>
+      <button type="button" id="get-games">Get Game Stats</button>
+      </div>
+
+<br />
+
+      <div class="auth-hide"> <h2>change password</h2>
+                <form id='change-password'>
+                <input type="password" name="passwords[old]" placeholder='Enter old password' class='passwordempty'>
+                <input type="password" name="passwords[new]" placeholder='Enter new password' class='passwordempty'>
+                <button>Change Password</button>
+                </form>
+      </div>
+
+      <div class="auth-hide"><h2>sign-out</h2>
+                <form id='sign-out'>
+                <button>Sign out</button>
+                </form>
+     </div>
+
+    </body>
+</html>
