@@ -32,16 +32,18 @@ const onClick = function(event) {
   if (store.currentPlayer === 'x') {
     nextPlayer = 'o';
     $('#new-message').text('It is O turn')
+    // setTimeout(function () { $('#new-message').text('') }, 2000)
     // onUpdate()
   } else {
     nextPlayer = 'x';
     $('#new-message').text('It is X turn')
+    // setTimeout(function () { $('#new-message').text('') }, 2000)
     // onUpdate()
   }
 
   if (typeof store.players[store.currentPlayer][cellRow][cellId] === 'number' ||
     typeof store.players[nextPlayer][cellRow][cellId] === 'number') { // Is busy (null)
-
+    $('#new-message').text('This cell is busy!')
     // console.log('This cell is busy');
 
   } else { // avaliable (number)
